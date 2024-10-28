@@ -1,0 +1,25 @@
+const { MongoClient } = require('mongodb');
+const uri = "mongodb://ADMIN:WElcome%23%23709394@G2DEDDCD02B6DB5-SGADW.adb.ap-singapore-1.oraclecloudapps.com:27017/ADMIN?authMechanism=PLAIN&authSource=$external&ssl=true&retryWrites=false&loadBalanced=true";
+let client = new MongoClient(uri);
+
+const result = async () => {
+    let conn;
+    try {
+        conn = await client.connect();
+        console.log("Connected successfully to server");
+        
+        const database = conn.db("admin");
+        const collection = database.collection("ocwecommerce_dv");
+        const product = await collection.findOne({ _id: 13 });
+        console.log(product);
+        
+    } catch (err) {
+        console.log(err);
+    } finally {
+        if (conn) {
+            await client.close();
+        }
+    }
+}
+
+result();

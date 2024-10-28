@@ -1,0 +1,57 @@
+{
+  "name": "ocw-ecommerce-store",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "instantsearch.js": "^4.75.2",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "mongodb": "^4.13.0",
+    "oracledb": "^6.6.0",
+    "parcel": "^2.12.0",
+    "typesense": "^1.8.2",
+    "typesense-instantsearch-adapter": "^2.8.0"
+  },
+  "scripts": {
+    "start": "parcel index.html --port 3001",
+    "indexer": "node scripts/populateTypesenseIndex.js",
+    "updateIndexer": "node scripts/updateTypesenseIndex.js",
+    "typesenseServer": "docker run -d -p 8108:8108 -v /data/typesense-server-data/:/data typesense/typesense:0.24.0 --data-dir /data --api-key=xyz --listen-port 8108 --enable-cors",
+    "build": "parcel build index.html --public-url https://ecommerce-store.typesense.org",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "server": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.12.0",
+    "assert": "^2.1.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "eslint": "^9.13.0",
+    "events": "^3.3.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "timers-browserify": "^2.0.12",
+    "url": "^0.11.4",
+    "util": "^0.12.5",
+    "vm-browserify": "^1.1.2"
+  }
+}
