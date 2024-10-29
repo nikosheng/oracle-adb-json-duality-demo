@@ -6,7 +6,7 @@ const app = express();
 // Enable CORS for all routes
 app.use(cors());
 
-const uri = "mongodb://ADMIN:WElcome%23%23709394@LVEHGH9RRMBGCID-JPADW.adb.ap-tokyo-1.oraclecloudapps.com:27017/ADMIN?authMechanism=PLAIN&authSource=$external&ssl=true&retryWrites=false&loadBalanced=true";
+const uri = "mongodb://ADMIN:xx@LVEHGH9RRMBGCxx-JPADW.adb.ap-tokyo-1.oraclecloudapps.com:27017/ADMIN?authMechanism=PLAIN&authSource=$external&ssl=true&retryWrites=false&loadBalanced=true";
 let client = new MongoClient(uri);
 
 // Get product endpoint
