@@ -1,5 +1,5 @@
 const { MongoClient } = require('mongodb');
-const uri = "mongodb://ADMIN:WElcome%23%23709394@G2DEDDCD02B6DB5-SGADW.adb.ap-singapore-1.oraclecloudapps.com:27017/ADMIN?authMechanism=PLAIN&authSource=$external&ssl=true&retryWrites=false&loadBalanced=true";
+const uri = "mongodb://ADMIN:xx@LVEHGH9RRMBGCID-JPADW.adb.ap-tokyo-1.oraclecloudapps.com:27017/ADMIN?authMechanism=PLAIN&authSource=$external&ssl=true&retryWrites=false&loadBalanced=true";
 let client = new MongoClient(uri);
 
 const result = async () => {
