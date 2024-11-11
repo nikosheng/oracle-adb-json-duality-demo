@@ -70,12 +70,7 @@ const searchClient = typesenseInstantsearchAdapter.searchClient;
 const search = instantsearch({
   searchClient,
   indexName: 'products',
-  routing: true,
-  initialUiState: {
-    products: {
-      query: 'iPhone',  // default query string
-    },
-  },
+  routing: true
 });
 
 // ============ Begin Widget Configuration
